@@ -2,14 +2,14 @@
 This repository contains an implementation of various activation functions used in machine learning and neural networks. The purpose of this project is to help others learn the fundamentals of activation functions and how to structure code for scalability and maintainability. The code is designed using Object-Oriented Programming principles and the Factory design pattern, making it easy to add new activation functions in the future.
 
 ## Table of Contents
-Overview
-Design and Architecture
-Implementation Details
-Code Explanation
-Key Design Patterns
-Questions to Consider
-Contributing
-License
+- Overview
+- Design and Architecture
+- Implementation Details
+- Code Explanation
+- Key Design Patterns
+- Questions to Consider
+- Contributing
+- License
 ## Overview
 Activation functions are a crucial part of neural networks, enabling non-linear transformations to the input data and allowing the network to learn complex patterns. This project provides an implementation of several popular activation functions in C++ including:
 
