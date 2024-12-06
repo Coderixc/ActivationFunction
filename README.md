@@ -57,19 +57,16 @@ Why it's used: Each activation function is a different "strategy" for processing
 ## Questions to Consider During Implementation
 When implementing this code, it's important to consider the following questions:
 
-# 1. Which activation functions should be implemented?
-What is the trade-off between complexity and performance for different activation functions?
-Should functions like Leaky ReLU, ELU, or GELU be added for advanced networks?
-# 2. How should input validation be handled?
-Are there specific edge cases that should be accounted for in the compute() methods, such as overflow, NaN values, or invalid inputs?
-# 3. How should the system be extended to support multi-dimensional inputs (e.g., vectors or matrices)?
-Should we modify the compute() method to handle multi-dimensional arrays? How should we handle element-wise activation?
-# 4. How do you ensure that the system is scalable?
-How will you handle the case where hundreds of activation functions are registered? Should the Factory class be optimized for efficiency?
-# 5. What are the memory and performance considerations when working with large datasets?
-Should we consider optimizing the activation functions for speed and memory usage, particularly in deep neural networks?
-# 6. How would you test the activation functions?
-What unit tests should be written to verify that each activation function works correctly?
+1. Which activation functions should be implemented?
+2. How should input validation be handled?
+3. How should the system be extended to support multi-dimensional inputs (e.g., vectors or matrices)?
+4. How do you ensure that the system is scalable?
+5. What are the memory and performance considerations when working with large datasets?
+6. How would you test the activation functions?
+
+Contributing
+Feel free to fork this repository, make improvements, and submit pull requests. All contributions are welcome, and suggestions for additional activation functions are encouraged!
+
 How do you test for edge cases such as very large or very small values?
 
 
