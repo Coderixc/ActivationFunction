@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="ActivationFuncFactory.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MasterActivationFunction.cpp" />
     <ClCompile Include="ReLU.cpp" />
     <ClCompile Include="Sigmoid.cpp" />
     <ClCompile Include="Tanh.cpp" />
@@ -148,6 +149,7 @@
   <ItemGroup>
     <ClInclude Include="ActivationFuncFactory.h" />
     <ClInclude Include="ActivationFunction.h" />
+    <ClInclude Include="MasterActivationFunction.h" />
     <ClInclude Include="ReLU.h" />
     <ClInclude Include="Sigmoid.h" />
     <ClInclude Include="Tanh.h" />
