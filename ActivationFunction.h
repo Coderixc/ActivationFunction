@@ -8,6 +8,7 @@ public:
     virtual double compute(double x) const = 0;  // Compute activation
     virtual std::string name() const = 0;        // Return function name
     virtual ~ActivationFunction() = default;    // Ensure proper cleanup
+    
 };
 
 #endif // ACTIVATION_FUNCTION_H

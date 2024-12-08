@@ -1,7 +1,6 @@
 
 #include "MasterActivationFunction.h"
-
-
+#include "Sigmoid.h"
 
 
 #pragma region Section:LeakyReLU Activation Function Body
@@ -26,6 +25,36 @@ std::string LeakyReLU::name() const
 {
 	return "LeakyReLU";
 }
+#pragma endregion
+
+#pragma region Section:Swish Activation Function Body
+
+double Swish::compute(double x) const
+{
+	Sigmoid* sigmoid = new Sigmoid();
+	double sigm =  sigmoid->compute(x);
+	delete sigmoid;
+	return x * sigm;
+}
+
+double Swish::compute(double x , double beta_parameter) 
+{
+	Swish::beta = beta_parameter;
+	Sigmoid* sigmoid = new Sigmoid();
+	double sigm = sigmoid->compute(Swish::beta * x);
+	delete sigmoid;
+	return sigm;
+}
+
+void Swish::setbeta(double beta_parameter)
+{
+	Swish::beta = beta_parameter;
+}
+std::string Swish::name() const
+{
+	return "Swish";
+}
+
 #pragma endregion
 
 
