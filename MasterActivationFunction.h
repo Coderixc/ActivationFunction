@@ -34,5 +34,13 @@ private :
 
 };
 
+class Softplus : public ActivationFunction
+{
+public:
+	double compute(const double x) const override;
+	std::string name() const override;
+
+};
+
 
 #endif //MASTER_ACTIVATION_FUNCTION_H

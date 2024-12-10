@@ -37,9 +37,13 @@ int main() {
 
         Swish* swishaf = new Swish();
         swishaf->setbeta(2);
-
         std::cout << swishaf->name() << " activation: " << swishaf->compute(input) << '\n';
         delete swishaf;
+
+        Softplus* softplus = new Softplus();
+        std::cout << softplus->name() << "activation " << softplus->compute(input) << '\n';
+        delete softplus;
+
 
 
     }

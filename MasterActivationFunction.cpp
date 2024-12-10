@@ -1,6 +1,7 @@
 
 #include "MasterActivationFunction.h"
 #include "Sigmoid.h"
+#include "cmath"
 
 
 #pragma region Section:LeakyReLU Activation Function Body
@@ -58,4 +59,18 @@ std::string Swish::name() const
 #pragma endregion
 
 
+#pragma region Section : SoftPlus Activation Function body
+double Softplus::compute(double x) const
+{
+	return std::log(1 + std::exp(x));
+}
+
+std::string Softplus::name() const
+{
+	return "Softplus";
+}
+
+
+
+#pragma endregion
 
