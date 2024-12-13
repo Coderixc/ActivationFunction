@@ -2,7 +2,7 @@
 #include "MasterActivationFunction.h"
 #include "Sigmoid.h"
 #include "cmath"
-
+#include <stdexcept>
 
 #pragma region Section:LeakyReLU Activation Function Body
 
@@ -58,7 +58,6 @@ std::string Swish::name() const
 
 #pragma endregion
 
-
 #pragma region Section : SoftPlus Activation Function body
 double Softplus::compute(double x) const
 {
@@ -70,7 +69,28 @@ std::string Softplus::name() const
 	return "Softplus";
 }
 
-
-
 #pragma endregion
 
+#pragma region Section : Maxout Activation Function body
+Maxout::Maxout(const std::vector<double>& coeffs) : coefficients(coeffs) {
+	if (coefficients.empty())
+	{
+		throw std::invalid_argument("Coefficients for Maxout cannot be empty!");
+	}
+}
+
+double Maxout::compute(double x) const
+{
+	double maxvalue = coefficients[0] * x;
+	for (size_t i = 1; i < coefficients.size(); i++)
+	{
+		maxvalue = std::max(maxvalue, coefficients[i] * x);
+	}
+	return maxvalue;
+}
+std::string Maxout::name() const
+{
+	return "Maxout";
+}
+
+#pragma endregion

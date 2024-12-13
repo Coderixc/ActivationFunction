@@ -2,7 +2,7 @@
 #define MASTER_ACTIVATION_FUNCTION_H
 
 #include "ActivationFunction.h"
-
+#include <vector>
 
 class LeakyReLU : public ActivationFunction {
 
@@ -41,6 +41,20 @@ public:
 	std::string name() const override;
 
 };
+
+class  Maxout : public ActivationFunction
+{
+private :
+	std::vector<double> coefficients;
+
+public :
+	double compute(double x) const override;
+
+	explicit Maxout(const std::vector<double>& coeffs);
+
+	std::string name() const override;
+};
+
 
 
 #endif //MASTER_ACTIVATION_FUNCTION_H
